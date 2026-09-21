@@ -1,0 +1,24 @@
+{
+  "name": "arena-ctf",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server-v2.js",
+    "test": "node --test test/v2.test.js",
+    "test:e2e": "node test/browser-v2.js",
+    "test:full": "node --env-file-if-exists=.env test/full-flow-v2.js",
+    "setup": "node scripts/setup.js",
+    "seed": "node --env-file-if-exists=.env scripts/seed.js",
+    "backup": "node --env-file-if-exists=.env scripts/backup.js"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2"
+  }
+}

@@ -1,0 +1,41 @@
+name: 錯誤回報
+description: 回報可重現的系統問題
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題描述
+      description: 請說明實際發生的情況與預期結果。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟
+      placeholder: |
+        1. 前往……
+        2. 點選……
+        3. 發生……
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: Commit SHA、分支或部署日期。
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 執行環境
+      description: 作業系統、Node.js 與瀏覽器版本等資訊。
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 記錄或截圖
+      description: 請移除密碼、Cookie、學號及其他敏感資料後再貼上。

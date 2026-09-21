@@ -1,0 +1,19 @@
+services:
+  challenge:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      FLAG: "NCKUCTF{M3oW_me0w_1ooooov3_p1@YiN6_T13_70C_TO3}"
+      # Optional public path prefix. Defaults to the domain root (/).
+      # Example: run `BASE_PATH=/ox docker compose up --build` for /ox/.
+      BASE_PATH: "${BASE_PATH:-/}"
+      # Optional strict validation of whether the supplied board is reachable
+      # in a normal Tic-Tac-Toe game. Disabled by default for the challenge.
+      CHECK_BOARD_LEGALITY: "${CHECK_BOARD_LEGALITY:-false}"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true

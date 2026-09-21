@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Test and coverage output
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db

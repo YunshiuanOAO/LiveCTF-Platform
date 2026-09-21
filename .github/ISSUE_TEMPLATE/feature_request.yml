@@ -1,0 +1,26 @@
+name: 功能建議
+description: 提議新的功能或流程改善
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用情境
+      description: 請說明目前遇到的問題，以及誰會使用這項功能。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建議方案
+      description: 描述期望的操作方式與結果。
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案
+      description: 若有考慮過其他作法，請一併說明。

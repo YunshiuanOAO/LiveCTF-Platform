@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff"><title>ARENA｜現場資安競賽</title>
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="Arena 首頁"><span class="brand-mark">CTF</span> 現場競賽 <span class="brand-caption">賽事管理系統</span></a><nav aria-label="主要導覽"><a href="/">即時戰況</a><a href="/play">參賽入口</a><a href="/admin">管理後台</a></nav></header>
+  <main id="app"><div class="empty">正在連線至競賽場地…</div></main>
+  <footer><span>現場資安競賽</span><span id="connection" role="status">連線中</span></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-content"></div><button class="ghost modal-close" data-action="close-modal">關閉</button></dialog>
+</body>
+</html>

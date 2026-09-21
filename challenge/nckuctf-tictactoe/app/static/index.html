@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070b14" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>NCKUCTF // TIC-TAC-TOE</title>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <main class="viewport">
+        <section class="game-card" aria-label="Tic-Tac-Toe challenge">
+          <div class="card-header">
+            <div>
+              <p class="kicker">MATCH</p>
+              <h2 id="gameTitle">Choose your mark</h2>
+            </div>
+            <div class="round-badge" id="roundBadge">READY</div>
+          </div>
+
+          <div class="game-body">
+            <div class="chooser" id="chooser">
+              <button class="mark-btn mark-x" data-mark="X" type="button" aria-label="Play as X">
+                <span>X</span>
+                <small>FIRST</small>
+              </button>
+              <button class="mark-btn mark-o" data-mark="O" type="button" aria-label="Play as O">
+                <span>O</span>
+                <small>SECOND</small>
+              </button>
+            </div>
+
+            <div class="arena" id="arena" hidden>
+              <div class="status-row">
+                <div class="identity">
+                  <span>YOU</span>
+                  <strong id="playerMark">X</strong>
+                </div>
+                <strong class="state" id="stateText">YOUR TURN</strong>
+                <div class="identity identity-right">
+                  <span>AI</span>
+                  <strong id="botMark">O</strong>
+                </div>
+              </div>
+
+              <div class="board" id="board" role="grid" aria-label="Tic-Tac-Toe board"></div>
+
+              <button id="resetButton" class="reset-btn" type="button">RESET</button>
+
+              <div class="hint-card" id="hintCard" hidden>
+                <span>HINT</span>
+                <p id="hintText"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="flag-modal" id="flagModal" hidden>
+      <div class="flag-panel" role="dialog" aria-modal="true" aria-labelledby="flagTitle">
+        <span class="flag-pre">ACCESS GRANTED</span>
+        <h2 id="flagTitle">You win.</h2>
+        <code id="flagValue"></code>
+        <button id="copyFlag" type="button">COPY FLAG</button>
+      </div>
+    </div>
+
+    <script src="static/app.js" defer></script>
+  </body>
+</html>

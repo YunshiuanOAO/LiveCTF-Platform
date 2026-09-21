@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Che55.com－擊敗棋王引擎</title>
+<link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>♞ Che55.com</h1>
+  <p class="tagline">你永遠執<b>白棋</b>並先手。擊敗我們的棋王引擎即可取得 Flag。</p>
+  <div class="badges">
+    <span id="meBadge" class="badge">玩家：...</span>
+    <span id="vipBadge" class="badge">VIP: ...</span>
+    <span id="gameBadge" class="badge">尚未開局</span>
+  </div>
+</header>
+
+<main>
+  <section class="board-wrap">
+    <div id="board" class="board"></div>
+    </section>
+
+  <aside class="side">
+    <div class="card control-card">
+      <div class="controls">
+        <button id="btnNew">＋ 開始新局</button>
+        <div class="control-row">
+          <button id="btnFlip">⇄ 翻轉棋盤</button>
+          <label class="promo">升變：
+            <select id="promo">
+              <option value="q">皇后</option>
+              <option value="r">城堡</option>
+              <option value="b">主教</option>
+              <option value="n">騎士</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>★ VIP 炮兵卡</h2>
+      <p>VIP 每局可使用一次替換，且僅能在開局時使用：獲得一名砲兵，但喪失本輪走子機會。</p>
+      <button id="btnVip">使用炮兵卡</button>
+      <p id="vipMsg" class="vipmsg"></p>
+    </div>
+
+    <div class="card" id="winGuide">
+      <h2>如何獲勝</h2>
+      <ol>
+        <li>開始新局，你執白棋。</li>
+        <li>與強悍引擎下標準西洋棋，公平獲勝可不容易。</li>
+        <li>將死黑王即可取得 Flag。</li>
+        <li>VIP 可以獲得一個砲兵。</li>
+      </ol>
+      <p class="small">VIP 老手提示：<code>e2</code> 看起來……很有爆發力。</p>
+    </div>
+
+    </aside>
+</main>
+
+<footer>Che55.com · vanilla.js + Flask · 公平對局中，引擎從不落敗</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

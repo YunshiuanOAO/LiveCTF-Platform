@@ -1,0 +1,18 @@
+[Unit]
+Description=Arena CTF live competition
+After=network.target
+
+[Service]
+Type=simple
+User=yunshiuan
+WorkingDirectory=/home/yunshiuan/arena-ctf
+# 改成 command -v node 顯示的絕對路徑
+ExecStart=/home/yunshiuan/.nvm/versions/node/v24.21.0/bin/node --env-file=.env server-v2.js
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+services:
+  che55:
+    build: .
+    ports:
+      # NOTE: host port 8000, NOT 5000 - macOS AirPlay Receiver occupies 5000
+      - "8001:5000"
+    environment:
+      - FLAG=${FLAG:-NCKUCTF{Ch3ss_0r_ch1nese_che55?_Wh1ich_0n3_1s_y0ur_fav0rite}}
+      - STOCKFISH_DEPTH=${STOCKFISH_DEPTH:-15}
